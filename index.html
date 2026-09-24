@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VistaFind | Image Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="brand">
+            <h1>VistaFind</h1>
+            <p>Discover images that spark your curiosity.</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+
+        <section class="search-section">
+            <h2>What do you want to explore?</h2>
+
+            <form id="search-form">
+                <label for="image-search">Search for images</label>
+
+                <div class="search-controls">
+                    <input
+                        type="search"
+                        id="image-search"
+                        name="image-search"
+                        placeholder="Try “space”, “nature”, or “technology”..."
+                    >
+
+                    <button type="submit" id="search-button">
+                        Search
+                    </button>
+
+                    <button type="reset" id="clear-button">
+                        Clear
+                    </button>
+                </div>
+            </form>
+
+            <div class="quick-picks">
+                <span>Quick picks:</span>
+                <button type="button">Nature</button>
+                <button type="button">Technology</button>
+                <button type="button">Space</button>
+                <button type="button">Animals</button>
+            </div>
+        </section>
+
+        <section class="results-section">
+            <div class="results-heading">
+                <h2>Results</h2>
+                <p id="result-count">Showing 0 results</p>
+            </div>
+
+            <p id="empty-state">Search to see results</p>
+
+            <div id="results" class="results-grid">
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

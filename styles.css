@@ -1,0 +1,199 @@
+/* VistaFind - Part 1 */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f9f8;
+    color: #183b3a;
+    line-height: 1.6;
+}
+
+/* Sticky branded header */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #0f766e;
+    color: white;
+    padding: 22px 7%;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+}
+
+.brand h1 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.brand p {
+    color: #d7fffa;
+    margin-top: 3px;
+}
+
+/* Main layout */
+.main-content {
+    width: min(1100px, 90%);
+    margin: 50px auto;
+}
+
+/* Search area */
+.search-section {
+    background: white;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(15, 118, 110, 0.08);
+}
+
+.search-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.search-controls {
+    display: flex;
+    gap: 10px;
+}
+
+#image-search {
+    flex: 1;
+    padding: 14px 16px;
+    border: 2px solid #b7d8d5;
+    border-radius: 10px;
+    font-size: 1rem;
+    outline: none;
+}
+
+#image-search:focus {
+    border-color: #0f766e;
+}
+
+#search-button,
+#clear-button {
+    border: none;
+    border-radius: 10px;
+    padding: 0 22px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#search-button {
+    background: #f97316;
+    color: white;
+}
+
+#clear-button {
+    background: #e2eeee;
+    color: #183b3a;
+}
+
+/* Quick-pick chips */
+.quick-picks {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.quick-picks span {
+    font-weight: bold;
+}
+
+.quick-picks button {
+    border: 1px solid #0f766e;
+    background: white;
+    color: #0f766e;
+    padding: 7px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.quick-picks button:hover {
+    background: #0f766e;
+    color: white;
+}
+
+/* Results */
+.results-section {
+    margin-top: 45px;
+}
+
+.results-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+.results-heading h2 {
+    font-size: 1.6rem;
+}
+
+#result-count {
+    color: #5f7775;
+}
+
+/* Required responsive CSS Grid */
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    min-height: 220px;
+}
+
+/* Empty state */
+#empty-state {
+    text-align: center;
+    padding: 55px 20px;
+    margin-bottom: 20px;
+    border: 2px dashed #b7d8d5;
+    border-radius: 16px;
+    color: #5f7775;
+    background: #ffffff;
+}
+
+/* Mobile layout */
+@media (max-width: 650px) {
+    .site-header {
+        padding: 18px 5%;
+    }
+
+    .brand h1 {
+        font-size: 1.6rem;
+    }
+
+    .main-content {
+        width: 92%;
+        margin: 30px auto;
+    }
+
+    .search-section {
+        padding: 24px;
+    }
+
+    .search-controls {
+        flex-direction: column;
+    }
+
+    #search-button,
+    #clear-button {
+        padding: 12px;
+    }
+
+    .results-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+}
