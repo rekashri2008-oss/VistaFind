@@ -197,3 +197,30 @@ label {
         gap: 4px;
     }
 }
+/* Part 2 image cards */
+
+.image-card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+.image-card:hover {
+    transform: translateY(-4px);
+}
+
+.image-card img {
+    width: 100%;
+    height: 220px;
+    display: block;
+    object-fit: cover;
+}
+
+.image-card h3 {
+    padding: 14px;
+    font-size: 0.95rem;
+    color: #183b3a;
+    word-break: break-word;
+}
